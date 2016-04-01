@@ -31,7 +31,7 @@ catdata_stats=pd.concat([catdata['review_count'].sum(),catdata['stars'].agg([np.
 #summary of review count
 catdata_stats['review_count'].describe()
 # review count between (10,2500) is 70%
-criterion = catdata_stats['review_count'].map(lambda x :x<2500and x>10)
+criterion = catdata_stats['review_count'].map(lambda x :x<2500 and x>10)
 float(len(catdata_stats[criterion]))/len(catdata_stats)  # 0.7011494252873564
 
 #histgram is bad
